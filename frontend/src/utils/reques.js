@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const request = axios.create({
-  baseURL: "http://localhost:8000/api/",
+  baseURL: "https://e-state-app.onrender.com/api/",
 });
