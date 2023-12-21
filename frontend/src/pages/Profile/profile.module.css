@@ -1,0 +1,79 @@
+.profile_user {
+  display: flex;
+  margin: 30px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.profile_username {
+  margin-top: 7px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.option_icon {
+  font-size: 26px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.listingTitle {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+.listings_box {
+  width: 40%;
+  margin: 30px auto;
+}
+
+.listing {
+  background-color: #e5e5e58d;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+  box-shadow: 0px 0px 13px 1px #0000003d;
+  transition: 0.3s;
+}
+.listing:hover {
+  transform: translateX(40px);
+}
+.listing_image {
+  width: 100px;
+  height: 100px;
+}
+.listing_name {
+  font-size: 20px;
+  font-weight: 500;
+}
+.create_first_listing {
+  background-color: var(--blue-color);
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+/* Media Query */
+@media (max-width: 991px) {
+  .listings_box {
+    width: 80%;
+  }
+}

@@ -1,0 +1,74 @@
+.edit_title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+.container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile_image {
+  position: relative;
+}
+.profile_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profiel_label {
+  position: absolute;
+  right: 9px;
+  bottom: -3px;
+  font-size: 23px;
+  cursor: pointer;
+}
+.edit_form {
+  margin-top: 20px;
+  width: 30%;
+}
+.edit_form_group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.edit_input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 17px;
+  margin-top: 4px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.214);
+}
+.edit_btn {
+  width: 30%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  background-color: var(--blue-color);
+  font-size: 16px;
+}
+
+/* Media Query */
+@media (max-width: 991px) {
+  .edit_form {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .edit_form {
+    width: 80%;
+  }
+}

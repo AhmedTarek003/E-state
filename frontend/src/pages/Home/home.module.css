@@ -1,0 +1,46 @@
+.landing {
+  background: url("../../images/EOI-Expression-of-Interest-in-Real-Estate.png");
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.596);
+}
+.landing_intro {
+  position: relative;
+  padding: 50px 15px 0;
+}
+.landing_title {
+  color: var(--white-color);
+  font-size: 40px;
+  font-weight: bold;
+}
+.landing_text {
+  color: #ccc;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.show_listings {
+  color: var(--blue-color);
+  margin-top: 30px;
+  display: block;
+  animation: listings 3s linear infinite;
+  position: absolute;
+}
+@keyframes listings {
+  0%,
+  100% {
+    left: 0px;
+  }
+  50% {
+    left: 30px;
+  }
+}

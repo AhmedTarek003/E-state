@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  gap: 15px;
+}
+.sidebar {
+  flex: 3;
+  padding: 15px;
+  height: calc(100vh - 70px);
+  box-shadow: 10px 15px 30px 0px rgb(0 0 0 / 30%);
+}
+.listing_options,
+.listing_options_offer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 25px 0 30px;
+}
+.listing_options_offer {
+  justify-content: center;
+}
+.option_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.house_info_group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  user-select: none;
+}
+.checkbox_label {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+.listing_sort {
+  margin: 20px 20px 35px;
+}
+.select {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 17px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.411);
+}
+.search_btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.listing_content {
+  flex: 9;
+  padding: 15px;
+  overflow-y: scroll;
+  height: calc(100vh - 60px);
+}
+.listing_title {
+  font-size: 30px;
+  margin: 30px 0 0 30px;
+}
+
+.listing_content::-webkit-scrollbar {
+  width: 0;
+}
+.noListings {
+  color: var(--red-color);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* media Query */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    justify-content: center;
+  }
+  .listing_fillter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

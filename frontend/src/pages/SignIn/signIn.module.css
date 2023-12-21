@@ -1,0 +1,112 @@
+.signIn {
+  background: url("../../../src/images/housing-market-september-980x736-1-980x675.jpg");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.632);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  background-color: #ffffff17;
+  width: 30%;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 34px 3px #0000006b;
+}
+.title {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.form_label {
+  color: var(--white-color);
+  margin-bottom: 4px;
+}
+.from_input {
+  height: 38px;
+  border-radius: 25px;
+  padding: 7px;
+  background-color: #ffffff17;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  color: white;
+}
+.from_input::placeholder {
+  color: white;
+}
+.form_btn {
+  width: 100%;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.form_btn:hover {
+  background-color: #c60303;
+}
+.form_btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  bottom: -15px;
+  left: 0;
+}
+.form_btn::after {
+  content: "OR";
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  bottom: -25px;
+  left: 46%;
+  color: black;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ask {
+  margin-top: 15px;
+}
+.link {
+  color: var(--link-color);
+}
+
+/* Media Query */
+@media (max-width: 991px) {
+  .container {
+    width: 50%;
+  }
+}
+@media (max-width: 667px) {
+  .container {
+    width: 80%;
+  }
+}

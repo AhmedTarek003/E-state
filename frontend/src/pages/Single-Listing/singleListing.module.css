@@ -1,0 +1,144 @@
+.container {
+  padding: 15px;
+}
+.container_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.listing_options {
+  font-size: 30px;
+  margin-right: 30px;
+}
+.option_icon {
+  margin: 0px 7px;
+  cursor: pointer;
+}
+.listing_name {
+  font-size: 25px;
+  font-weight: 500;
+}
+.listing_address {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.about_listing {
+  display: flex;
+  gap: 10px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.listing_adva {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.adva_icon {
+  color: var(--gray-color);
+}
+.house_info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.house_type {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 4px 25px;
+  border-radius: 20px;
+}
+.house_price {
+  color: var(--red-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+.listing_desc {
+  margin-top: 20px;
+  display: flex;
+  font-size: 17px;
+  font-weight: 500;
+}
+.listing_desc p {
+  margin-left: 10px;
+  color: var(--gray-color);
+  max-width: 70%;
+  line-height: 1.5;
+}
+.contact_btn {
+  margin-top: 30px;
+  padding: 10px 50px;
+  background-color: var(--dark-green);
+  font-size: 18px;
+  border-radius: 2px;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  margin-left: 25px;
+}
+.contact_btn:hover {
+  background-color: var(--green-color);
+}
+.contact_form {
+  width: 100%;
+  margin-top: 50px;
+}
+.contact_title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.contact_form_group {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+.contact_form_label {
+  color: #5c5c5c;
+  margin: 4px;
+}
+.contact_form_input,
+.contact_form_textarea {
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  font-size: 17px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.342);
+}
+.contact_form_input {
+  width: 40%;
+}
+.contact_form_textarea {
+  font-family: "Roboto", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.form_sub,
+.form_cancel {
+  padding: 8px 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  color: var(--white-color);
+}
+.form_sub {
+  background-color: var(--blue-color);
+}
+.form_cancel {
+  background-color: var(--red-color);
+}
+
+@media (max-width: 768px) {
+  .contact_form_input {
+    width: 80%;
+  }
+}
