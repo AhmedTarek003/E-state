@@ -11,7 +11,7 @@ const EditListingForm = ({ listing, id }) => {
   const dispatch = useDispatch();
   const [files, setFiles] = useState([]);
   const [images, setImages] = useState([]);
-  const [dataImages, setDataImages] = useState(listing?.listingImages);
+  const [dataImages] = useState(listing?.listingImages);
   const [formData, setFormData] = useState({
     name: listing?.name,
     desc: listing?.desc,
@@ -46,11 +46,6 @@ const EditListingForm = ({ listing, id }) => {
     setImages(() => myImages);
   };
 
-  // remove images from data
-  // const removeImagesFromData = (image) => {
-  //   setDataImages(() => dataImages.filter((i) => i !== image));
-  // };
-
   // Change values
   const onChangeHandle = (e) => {
     if (e.target.id === "sell" || e.target.id === "rent") {
@@ -84,10 +79,6 @@ const EditListingForm = ({ listing, id }) => {
         formData.append("images", image);
       });
       dispatch(updateListingImages(id, formData));
-    } else {
-      // if (dataImages.length !== listing.listingImages.length) {
-      //   console.log("yes")
-      // }
     }
     dispatch(updateListingById(id, formData));
     setFiles(() => []);
