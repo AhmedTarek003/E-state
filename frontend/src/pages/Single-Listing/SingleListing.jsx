@@ -96,10 +96,13 @@ const SingleListing = () => {
               {listing?.offer ? (
                 <div className={style.house_price}>
                   <del style={{ color: "gray" }}>{listing?.price}$ </del>
-                  {listing?.price - listing?.discountPrice}$/month
+                  {listing?.price - listing?.discountPrice}$
+                  {listing?.type === "rent" && "/month"}
                 </div>
               ) : (
-                <div className={style.house_price}>{listing?.price}$/month</div>
+                <div className={style.house_price}>
+                  {listing?.price}${listing?.type === "rent" && "/month"}
+                </div>
               )}
             </div>
           </div>

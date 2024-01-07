@@ -38,3 +38,12 @@
   background-color: transparent;
   color: var(--blue-color);
 }
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+  .formBtn {
+    width: 80%;
+  }
+}

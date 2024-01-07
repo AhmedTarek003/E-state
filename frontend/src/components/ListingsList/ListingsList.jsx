@@ -23,7 +23,12 @@ const ListingsList = ({ listings }) => {
               {listing?.address}
             </div>
             <p className={style.listing_desc}>{listing?.desc}</p>
-            <div className={style.listing_price}>{listing?.price}$/month</div>
+            <div className={style.listing_price}>
+              {listing?.offer
+                ? listing?.price - listing?.discountPrice
+                : listing?.price}
+              ${listing?.type === "rent" && "/month"}
+            </div>
             <div className={style.listing_options}>
               <div className={style.listing_opt}>{listing?.beds} Beds</div>
               <div className={style.listing_opt}>{listing?.baths} Baths</div>

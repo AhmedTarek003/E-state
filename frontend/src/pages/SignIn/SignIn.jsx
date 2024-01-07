@@ -3,14 +3,16 @@ import style from "./signIn.module.css";
 import { Link } from "react-router-dom";
 import OAuth from "../../components/OAuth/OAuth";
 import { toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signInUser } from "../../redux/apiCalls/authApiCall";
+import Loader from "../../components/Loader/Loader";
 
 const SignIn = () => {
   const dispatch = useDispatch();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { loading } = useSelector((state) => state.auth);
 
   // Form Submit Handler
   const formSubmitHandler = (e) => {
@@ -65,6 +67,7 @@ const SignIn = () => {
           </div>
         </div>
       </div>
+      {loading && <Loader />}
     </section>
   );
 };

@@ -41,11 +41,12 @@ const AllListings = () => {
     }
   };
   const { listings } = useSelector((state) => state.listing);
-
+  // get All Listing
   useEffect(() => {
-    dispatch(getAllListings());
     if (search) {
       dispatch(getAllListingsWithFilter(`search=${search}`));
+    } else {
+      dispatch(getAllListings());
     }
   }, [dispatch, search]);
 

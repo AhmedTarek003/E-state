@@ -6,11 +6,13 @@ import { authActions } from "../Sices/authSlice";
 export function signInUser(info) {
   return async (dispatch) => {
     try {
+      dispatch(authActions.startLoading());
       const { data } = await request.post(`auth/signIn`, info);
       if (data) {
         localStorage.setItem("UserInfo", JSON.stringify(data));
       }
       dispatch(authActions.authUser(data));
+      dispatch(authActions.endLoading());
     } catch (error) {
       toast.error(error.response.data.msg);
     }
@@ -51,11 +53,13 @@ export function verifyAccount(userId, token) {
 export function authGoogleUser(info) {
   return async (dispatch) => {
     try {
+      dispatch(authActions.startLoading());
       const { data } = await request.post(`auth/google`, info);
       if (data) {
         localStorage.setItem("UserInfo", JSON.stringify(data));
       }
       dispatch(authActions.authUser(data));
+      dispatch(authActions.endLoading());
     } catch (error) {
       console.log(error.response.data.msg);
     }

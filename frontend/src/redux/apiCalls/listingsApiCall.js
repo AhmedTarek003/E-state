@@ -6,8 +6,10 @@ import { listingActions } from "../Sices/listingSlice";
 export function getAllListings() {
   return async (dispatch) => {
     try {
+      dispatch(listingActions.startLoading());
       const { data } = await request.get(`listings`);
       dispatch(listingActions.getAllListings(data));
+      dispatch(listingActions.endLoading());
     } catch (error) {
       console.log(error);
     }

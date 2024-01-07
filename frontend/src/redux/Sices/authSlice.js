@@ -6,6 +6,7 @@ const initialState = {
     : null,
   registerMSG: null,
   verifyMSG: null,
+  loading: false,
 };
 
 const authSlice = createSlice({
@@ -26,6 +27,12 @@ const authSlice = createSlice({
     },
     clearRegisterMSG(state) {
       state.registerMSG = null;
+    },
+    startLoading(state) {
+      state.loading = true;
+    },
+    endLoading(state) {
+      state.loading = false;
     },
   },
 });

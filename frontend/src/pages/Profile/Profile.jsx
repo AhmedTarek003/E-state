@@ -6,6 +6,7 @@ import swal from "sweetalert";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { deleteUserById, getUserById } from "../../redux/apiCalls/userApiCall";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,10 @@ const Profile = () => {
   };
   return (
     <section>
+      <Helmet>
+        <title>Profile</title>
+        <meta name="description" content="this is user profile" />
+      </Helmet>
       <Header />
       <div className={style.container}>
         <div className={style.profile_user}>
@@ -42,12 +47,14 @@ const Profile = () => {
             <div className={style.profile_username}>{gUser?.username}</div>
           </div>
           <div className={style.profile_options}>
-            <Link to={`/edit-profile/${id}`}>
-              <FiEdit
-                style={{ color: "#07f373" }}
-                className={style.option_icon}
-              />
-            </Link>
+            {!gUser?.isGoogle && (
+              <Link to={`/edit-profile/${id}`}>
+                <FiEdit
+                  style={{ color: "#07f373" }}
+                  className={style.option_icon}
+                />
+              </Link>
+            )}
             <FiTrash2
               style={{ color: "red" }}
               className={style.option_icon}
