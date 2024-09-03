@@ -72,6 +72,7 @@ const SingUp = () => {
               <label className={style.form_label}>username</label>
               <input
                 type="text"
+                name="username"
                 placeholder="enter your name"
                 className={style.from_input}
                 value={username}
@@ -82,6 +83,7 @@ const SingUp = () => {
               <label className={style.form_label}>Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="enter your email"
                 className={style.from_input}
                 value={email}

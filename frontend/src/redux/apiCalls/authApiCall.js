@@ -14,6 +14,7 @@ export function signInUser(info) {
       dispatch(authActions.authUser(data));
       dispatch(authActions.endLoading());
     } catch (error) {
+      dispatch(authActions.endLoading());
       toast.error(error.response.data.msg);
     }
   };
@@ -61,6 +62,7 @@ export function authGoogleUser(info) {
       dispatch(authActions.authUser(data));
       dispatch(authActions.endLoading());
     } catch (error) {
+      dispatch(authActions.endLoading());
       console.log(error.response.data.msg);
     }
   };
